@@ -1,45 +1,20 @@
-void setup(){
+void setup() { //<>// //<>//
+  
   size(400, 400);
-  noFill();
-  drawCircle(width/2, height/2 ,height/2);
-  drawCircle1(width/2, height/2 ,height/2);
-  drawCircle2(width/2, height/2 ,height/2);
-  drawCircle3(width/2, height/2 ,height/2);
-} //<>//
-
-void drawCircle(float x, float y, float radius){
-
-  ellipse( x+10, y+15, radius-20, radius-20);
-  
-  if(radius >20){
-    drawCircle(x+15, y-15, radius-10);
-  }
-  
+  fill(255);
+  drawCircle(0, height, 25, 25, -25);
+  drawCircle(width, 0, 25, -25, 25);
+  drawCircle(0, 0, 25, 25, 25);
+  drawCircle(width, height, 25, -25, -25);
 }
-void drawCircle1(float x, float y, float radius){
 
-  ellipse( x+10, y+10, radius-20, radius-20);
+void drawCircle(float x, float y, float radius, int xDif, int yDif ) {
   
-  if(radius >20){
-    drawCircle(x-15, y+15, radius-10);
+  ellipse(x, y, radius, radius);
+  if (x< height/2) {
+    drawCircle(x+xDif, y+yDif, radius+15, xDif, yDif);
   }
-  
+  if (x> height/2) {
+    drawCircle(x+xDif, y+yDif, radius+15, xDif, yDif);
+  }
 }
-void drawCircle2(float x, float y, float radius){
-
-  ellipse( x+10, y+10, radius-20, radius-20);
-  
-  if(radius >20){
-    drawCircle(x-15, y-15, radius-10);
-  }
-  
-}
-void drawCircle3(float x, float y, float radius){
-
-  ellipse( x+10, y+10, radius-20, radius-20);
-  
-  if(radius >20){
-    drawCircle(x-15, y+15, radius-10);
-  }
-  
-} //<>//
