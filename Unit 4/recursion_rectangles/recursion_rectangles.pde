@@ -1,19 +1,20 @@
 float randomWidth;
 float randomHeight;
+float newWidth;
+float newHeight;
 
 void setup() {
 
   size(500, 500);
-  
-  randomWidth = random (0, width);
-  randomHeight = random (0, height);
-  
+
+  randomWidth = random (50, width);
+  randomHeight = random (50, height);
   strokeWeight(5);
-  drawRect();
+  drawRect(width, height);
   
 }
 
-void drawRect(){
+void drawRect(float newWidth, float newHeight) {
   fill(159, 227, 247);
   rect(randomWidth, randomHeight, width-randomWidth, height+randomHeight); //4
   fill(243, 130, 130);
@@ -23,4 +24,6 @@ void drawRect(){
   fill(255);
   rect(randomWidth, 0, width-randomWidth, randomHeight); //2
 
+  
+    
 }
