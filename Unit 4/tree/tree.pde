@@ -1,6 +1,7 @@
 void setup() {
+  
   size(800, 400);
-
+  
   //move the origin
   translate(width/2, height);
 
@@ -29,7 +30,7 @@ void drawTree(float depth) {
     rotate(radians(random(-55,-150))); 
     stroke(255, 0, 0);
     line(0, 0, 100, 0); //draw along the x-axis
-    translate(random(30, 100), 0); //translate to end of branch before drawing next y
+    translate(random(40, 100), 0); //translate to end of branch before drawing next y
     scale(0.7, 0.6);
     drawTree(depth - 1);
     popMatrix();
