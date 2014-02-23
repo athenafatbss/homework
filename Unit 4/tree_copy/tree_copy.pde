@@ -27,7 +27,11 @@ void drawTree(float depth) {
   if (depth > 0) {
 
     //draw base
-    stroke(98, 124, 15);
+    if (depth<10){
+      stroke(110, 127, 70);
+    } else{
+      stroke(104, 90, 72);
+    }
     line(0, 0, 100, 0); //drawn alon x-axis
     
     //move to the end of the base
@@ -37,6 +41,11 @@ void drawTree(float depth) {
     pushMatrix();
     rotate(radians(random(-55,-150))); 
     //stroke(255, 0, 0);
+        if (depth<10){
+      stroke(110, 127, 70);
+    } else{
+      stroke(104, 90, 72);
+    }
     line(0, 0, 100, 0); //draw along the x-axis
     translate(random(40, 100), 0); //translate to end of branch before drawing next y
     scale(random(0.5, 0.8), random(0.5, 0.7));
@@ -47,6 +56,11 @@ void drawTree(float depth) {
     pushMatrix();
     rotate(radians(random(45, -200)));
     //stroke(0, 255, 0);
+        if (depth<10){
+      stroke(110, 127, 70);
+    } else{
+      stroke(104, 90, 72);
+    }
     line(0, 0, 100, 0); //draw along the x-axis
     translate(random(30, 100),0);
     scale(random(0.5, 0.8), random(0.5, 0.8));
